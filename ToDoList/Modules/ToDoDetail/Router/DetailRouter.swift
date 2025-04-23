@@ -7,6 +7,10 @@
 
 import Foundation
 
-final class DetailRouter: RouterProtocol {
+final class DetailRouter: DetailRouterProtocol {
+    
+    func navigateToDetail() {
+        <#code#>
+    }
     
 }

@@ -7,8 +7,9 @@
 
 import Foundation
 
-final class DetailViewState: ObservableObject, ViewStateProtocol {
+final class DetailViewState: ObservableObject, DetailViewStateProtocol {
     
-    var presenter: PresenterProtocol?
+    var presenter: DetailPresenterProtocol?
+    var viewState: DetailViewState?
     
 }

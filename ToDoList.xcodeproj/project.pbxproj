@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210352452DB8F02000F08902 /* ListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210352442DB8F02000F08902 /* ListViewState.swift */; };
 		211EE9022DB11BDB001A71E8 /* ToDoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EE9012DB11BDB001A71E8 /* ToDoListApp.swift */; };
 		211EE9042DB11BDB001A71E8 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EE9032DB11BDB001A71E8 /* DetailView.swift */; };
 		211EE9062DB11BDD001A71E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211EE9052DB11BDD001A71E8 /* Assets.xcassets */; };
 		211EE9092DB11BDD001A71E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 211EE9082DB11BDD001A71E8 /* Preview Assets.xcassets */; };
-		211EE90B2DB11BDD001A71E8 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EE90A2DB11BDD001A71E8 /* Persistence.swift */; };
+		211EE90B2DB11BDD001A71E8 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EE90A2DB11BDD001A71E8 /* DataStore.swift */; };
 		211EE90E2DB11BDD001A71E8 /* ToDoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 211EE90C2DB11BDD001A71E8 /* ToDoList.xcdatamodeld */; };
 		211EE91A2DB11FAC001A71E8 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EE9192DB11FAC001A71E8 /* Entity.swift */; };
 		211EE91C2DB11FCF001A71E8 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211EE91B2DB11FCF001A71E8 /* NetworkService.swift */; };
@@ -21,7 +22,6 @@
 		215A9F292DB26BA8004C6C07 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A9F282DB26BA8004C6C07 /* ListPresenter.swift */; };
 		215A9F2C2DB26BB7004C6C07 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A9F2B2DB26BB7004C6C07 /* ListInteractor.swift */; };
 		215A9F2E2DB26BC0004C6C07 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A9F2D2DB26BC0004C6C07 /* ListView.swift */; };
-		215A9F302DB26BC9004C6C07 /* StateListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A9F2F2DB26BC9004C6C07 /* StateListView.swift */; };
 		215A9F322DB26BD0004C6C07 /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A9F312DB26BD0004C6C07 /* ListRouter.swift */; };
 		215A9F372DB27523004C6C07 /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A9F362DB27523004C6C07 /* ListProtocols.swift */; };
 		215A9F3B2DB275FE004C6C07 /* DetailAssemblies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 215A9F3A2DB275FE004C6C07 /* DetailAssemblies.swift */; };
@@ -32,12 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210352442DB8F02000F08902 /* ListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewState.swift; sourceTree = "<group>"; };
 		211EE8FE2DB11BDB001A71E8 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		211EE9012DB11BDB001A71E8 /* ToDoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListApp.swift; sourceTree = "<group>"; };
 		211EE9032DB11BDB001A71E8 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		211EE9052DB11BDD001A71E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		211EE9082DB11BDD001A71E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		211EE90A2DB11BDD001A71E8 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		211EE90A2DB11BDD001A71E8 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		211EE90D2DB11BDD001A71E8 /* ToDoList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoList.xcdatamodel; sourceTree = "<group>"; };
 		211EE9192DB11FAC001A71E8 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		211EE91B2DB11FCF001A71E8 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -46,7 +47,6 @@
 		215A9F282DB26BA8004C6C07 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		215A9F2B2DB26BB7004C6C07 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
 		215A9F2D2DB26BC0004C6C07 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		215A9F2F2DB26BC9004C6C07 /* StateListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateListView.swift; sourceTree = "<group>"; };
 		215A9F312DB26BD0004C6C07 /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
 		215A9F362DB27523004C6C07 /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
 		215A9F3A2DB275FE004C6C07 /* DetailAssemblies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssemblies.swift; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 		211EE9142DB11C36001A71E8 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				211EE90A2DB11BDD001A71E8 /* Persistence.swift */,
+				211EE90A2DB11BDD001A71E8 /* DataStore.swift */,
 				211EE9192DB11FAC001A71E8 /* Entity.swift */,
 			);
 			path = Entity;
@@ -167,8 +167,8 @@
 		215A9F222DB26B16004C6C07 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				215A9F382DB275D3004C6C07 /* Assembly */,
 				215A9F352DB27519004C6C07 /* Protocols */,
+				215A9F382DB275D3004C6C07 /* Assembly */,
 				215A9F262DB26B5E004C6C07 /* Presenter */,
 				215A9F272DB26B63004C6C07 /* Interactor */,
 				215A9F252DB26B55004C6C07 /* View */,
@@ -202,7 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				215A9F2D2DB26BC0004C6C07 /* ListView.swift */,
-				215A9F2F2DB26BC9004C6C07 /* StateListView.swift */,
+				210352442DB8F02000F08902 /* ListViewState.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,13 +341,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				215A9F192DB254CD004C6C07 /* DetailInteractor.swift in Sources */,
-				211EE90B2DB11BDD001A71E8 /* Persistence.swift in Sources */,
+				211EE90B2DB11BDD001A71E8 /* DataStore.swift in Sources */,
 				215A9F2E2DB26BC0004C6C07 /* ListView.swift in Sources */,
 				215A9F372DB27523004C6C07 /* ListProtocols.swift in Sources */,
 				211EE91A2DB11FAC001A71E8 /* Entity.swift in Sources */,
 				217F7D852DB21F7D00A3249D /* ListAssemblies.swift in Sources */,
 				217F7D822DB21E7E00A3249D /* DetailRouter.swift in Sources */,
-				215A9F302DB26BC9004C6C07 /* StateListView.swift in Sources */,
 				211EE91E2DB11FF0001A71E8 /* DetailProtocols.swift in Sources */,
 				211EE9042DB11BDB001A71E8 /* DetailView.swift in Sources */,
 				217F7D802DB21DA200A3249D /* DetailPresenter.swift in Sources */,
@@ -358,6 +357,7 @@
 				211EE90E2DB11BDD001A71E8 /* ToDoList.xcdatamodeld in Sources */,
 				215A9F3B2DB275FE004C6C07 /* DetailAssemblies.swift in Sources */,
 				215A9F2C2DB26BB7004C6C07 /* ListInteractor.swift in Sources */,
+				210352452DB8F02000F08902 /* ListViewState.swift in Sources */,
 				217F7D7E2DB21CF700A3249D /* DetailViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

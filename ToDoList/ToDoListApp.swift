@@ -11,11 +11,11 @@ import SwiftUI
 struct ToDoListApp: App {
     
     let persistenceController = PersistenceController.shared
-    var assemblies = AboutConfigurator()
+    var assemblies = ListAssemblies()
     
     var body: some Scene {
         WindowGroup {
-            ListView()
+            ListView(viewState: assemblies.build())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .onAppear {
                     if isFirstLaunch() {

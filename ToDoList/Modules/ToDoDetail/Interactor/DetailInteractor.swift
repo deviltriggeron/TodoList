@@ -7,9 +7,9 @@
 
 import Foundation
 
-final class DetailInteractor: InteractorProtocol {
+final class DetailInteractor: DetailInteractorProtocol {
     
-    var presenter: PresenterProtocol?
+    var presenter: DetailPresenterProtocol?
     var todoStore: PersistenceController = PersistenceController.shared
     
     func deleteTodo() {

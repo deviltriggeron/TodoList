@@ -7,16 +7,12 @@
 
 import Foundation
 
-final class DetailPresenter: PresenterProtocol {
+final class DetailPresenter: DetailPresenterProtocol {
     
-    var router: RouterProtocol
-    var viewState: ViewStateProtocol
-    var interactor: InteractorProtocol
+    var viewState: DetailViewStateProtocol?
     
-    init(router: RouterProtocol, viewState: ViewStateProtocol, interactor: InteractorProtocol) {
-        self.router = router
-        self.viewState = viewState
-        self.interactor = interactor
-    }
+    var interactor: DetailInteractorProtocol?
     
+    var router: DetailRouterProtocol?
+
 }

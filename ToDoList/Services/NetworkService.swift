@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class NetworkService: ObservableObject, NetworkServiceProtocol {
+class NetworkService: ObservableObject {
     
     func fetchData(completion: @escaping () -> Void) {
         AF.request("https://dummyjson.com/todos", method: .get).responseDecodable(of: Task.self) { response in
