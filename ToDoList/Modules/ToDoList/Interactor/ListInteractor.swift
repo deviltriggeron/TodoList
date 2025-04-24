@@ -22,12 +22,7 @@ final class ListInteractor: ListInteractorProtocol {
         animation: .default)
     var items: FetchedResults<TaskItem>
     
-    func retrieveTasks() throws -> FetchedResults<TaskItem> {
-        
-        guard !items.isEmpty else {
-            throw ListInteractorError.emptyDataStore
-        }
-        
+    func retrieveTasks() -> FetchedResults<TaskItem> {
         return items
     }
     

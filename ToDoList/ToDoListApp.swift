@@ -12,14 +12,15 @@ struct ToDoListApp: App {
     
     let persistenceController = PersistenceController.shared
     var assemblies = ListAssemblies()
+    let services = NetworkService()
     
     var body: some Scene {
         WindowGroup {
-            ListView(viewState: assemblies.build())
+            ListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .onAppear {
                     if isFirstLaunch() {
-                        assemblies.services.fetchData {
+                        services.fetchData {
                             print("Data loaded")
                         }
                     }
@@ -29,7 +30,7 @@ struct ToDoListApp: App {
     
     private func resetAndFetchData() {
         UserDefaults.standard.set(false, forKey: "HasLaunchedBefore")
-        assemblies.services.fetchData {
+        services.fetchData {
             print("Data refresh")
         }
     }

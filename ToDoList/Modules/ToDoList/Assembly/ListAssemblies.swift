@@ -7,18 +7,20 @@
 
 import Foundation
 
-final class ListAssemblies: ListAssembliesProtocol {    
+final class ListAssemblies: ListAssembliesProtocol {
     
     typealias Presenter = ListPresenter
     typealias Interactor = ListInteractor
     typealias Router = ListRouter
     typealias View = ListView
+    typealias ViewState = ListViewState
+    typealias Service = NetworkService
     
     func build() -> View {
         let presenter = Presenter()
         let interactor = Interactor()
         let router = Router()
-        let viewState = ListViewState()
+        let viewState = ViewState()
         let view = View(viewState: viewState)
         
         self.assemble(view: view, viewState: viewState, presenter: presenter, router: router, interactor: interactor)

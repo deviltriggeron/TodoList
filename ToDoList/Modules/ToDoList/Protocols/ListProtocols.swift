@@ -10,22 +10,22 @@ import SwiftUI
 import CoreData
 
 protocol ListViewProtocol {
-    var viewState: ListViewState { get set }
+//    var viewState: ListViewState { get set }
 }
 
 protocol ListPresenterProtocol: ObservableObject {
     var viewState: (any ListViewStateProtocol)? { get set }
     var interactor: ListInteractorProtocol? { get set }
     var router: (any ListRouterProtocol)? { get set }
-    var items: FetchedResults<TaskItem>? { get set }
+    var items: [NewEntity] { get set }
     func clearDataStore()
-    func retrieveTasks() throws -> FetchRequest<TaskItem>
+    func retrieveTasks()
 }
 
 protocol ListInteractorProtocol {
     var presenter: (any ListPresenterProtocol)? { get set }
     
-    func retrieveTasks() throws -> FetchedResults<TaskItem>
+    func retrieveTasks() -> FetchedResults<TaskItem>
     func clearDataStore()
 }
 
@@ -37,6 +37,7 @@ protocol ListRouterProtocol {
 
 protocol ListViewStateProtocol: ObservableObject {
     var presenter: (any ListPresenterProtocol)? { get set }
+    var items: [NewEntity] { get set }
 }
 
 protocol ListAssembliesProtocol {

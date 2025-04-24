@@ -9,25 +9,25 @@ import SwiftUI
 
 struct ListView: View, ListViewProtocol {
     
-    @ObservedObject var viewState: ListViewState
+    @StateObject var viewState: ListViewState = ListViewState()
     
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(viewState.retrieveTasks()) { item in
+                    ForEach(viewState.items, id: \.id) { item in
                         NavigationLink {
-                            VStack {
-                                Text("Item at \(item.name ?? " ")")
-                                Text("\(item.desc ?? " ")")
-                            }
+//                            VStack {
+//                                Text("Item at \(item.name)")
+//                                Text("\(item.desc)")
+//                            }
                         } label: {
                             HStack {
                                 Image(systemName: item.isCompleted ? "checkmark.circle.fill" : "circle")
                                     .foregroundColor(item.isCompleted ? .green : .gray)
                                 VStack(alignment: .leading) {
-                                    Text("Item at \(item.name ?? " ")")
-                                    Text("\(item.desc ?? " ")")
+                                    Text("Item at \(item.name)")
+                                    Text("\(item.desc)")
                                 }
                             }
                         }
@@ -54,6 +54,9 @@ struct ListView: View, ListViewProtocol {
                 }
             } // delete
             .navigationTitle("Задачи")
+            .onAppear {
+                viewState.retrieveTasks()
+            }
         }
         
     }

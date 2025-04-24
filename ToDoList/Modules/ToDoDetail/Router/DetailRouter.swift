@@ -10,7 +10,7 @@ import Foundation
 final class DetailRouter: DetailRouterProtocol {
     
     func navigateToDetail() {
-        <#code#>
+        
     }
     
 }

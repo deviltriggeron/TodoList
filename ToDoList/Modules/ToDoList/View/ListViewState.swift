@@ -6,11 +6,11 @@
 //
 
 import SwiftUI
-import CoreData
 
-final class ListViewState: ListViewStateProtocol, ObservableObject {
+final class ListViewState: ObservableObject, ListViewStateProtocol {
 
     var presenter: (any ListPresenterProtocol)?
+    @Published var items: [NewEntity] = []
 //    var viewContext: NSManagedObjectContext
 //    @Environment(\.managedObjectContext)var viewContext: NSManagedObjectContext
 //    @FetchRequest(
@@ -26,9 +26,11 @@ final class ListViewState: ListViewStateProtocol, ObservableObject {
         
     }
     
-    func retrieveTasks() throws -> FetchRequest<TaskItem>{
-        return try presenter?.retrieveTasks()
+    func retrieveTasks() {
+        presenter?.retrieveTasks()
     }
+    
+    
     
 //    func addItem() {
 //        withAnimation {
@@ -44,9 +46,9 @@ final class ListViewState: ListViewStateProtocol, ObservableObject {
 //        }
 //    }
 //
-//    func deleteItems(offsets: IndexSet) {
-//        withAnimation {
-//            offsets.map { self.items[$0] }.forEach(self.viewContext.delete)
+    func deleteItems(offsets: IndexSet) {
+        withAnimation {
+//            offsets.map { self.items[$0] }.forEach(presenter.viewContext.delete)
 //
 //            do {
 //                try self.viewContext.save()
@@ -54,8 +56,8 @@ final class ListViewState: ListViewStateProtocol, ObservableObject {
 //                let nsError = error as NSError
 //                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
 //            }
-//        }
-//    }
+        }
+    }
 //    
 //    let itemFormatter: DateFormatter = {
 //        let formatter = DateFormatter()
